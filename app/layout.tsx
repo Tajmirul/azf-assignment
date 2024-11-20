@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Anton } from 'next/font/google';
-import './globals.css';
 import Navbar from '@/components/navbar';
-import ReactQueryProvider from './_components/ReactQueryProvider';
+import './globals.css';
 
 const interFont = Inter({
     weight: ['400', '600'],
@@ -33,10 +32,8 @@ export default function RootLayout({
             <body
                 className={`${interFont.variable} ${antonFont.variable} antialiased`}
             >
-                <ReactQueryProvider>
-                    <Navbar />
-                    {children}
-                </ReactQueryProvider>
+                <Navbar />
+                {children}
             </body>
         </html>
     );
